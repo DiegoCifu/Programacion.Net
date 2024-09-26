@@ -12,10 +12,20 @@ while (contraseñaIntroducida != contraseña)
     Console.WriteLine("Introduce la contraseña:");
     contraseñaIntroducida = Console.ReadLine();
     intentos++;
-    if (intentos >= 3)
+
+    if (contraseña == contraseñaIntroducida)
     {
-        Console.WriteLine("¡Has superado el número de intentos!");
-        break;
+        Console.WriteLine("¡Contraseña correcta!");
+    }
+
+    else
+    {
+        Console.WriteLine("Contraseña Incorrecta, intentalo de nuevo");
+        
+        if (intentos >= 3)
+        {
+            Console.WriteLine("¡Has superado el número de intentos!");
+            return;
+        }
     }
 }
-Console.WriteLine("¡Contraseña correcta!");
