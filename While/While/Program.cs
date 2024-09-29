@@ -32,7 +32,6 @@ while (contraseñaIntroducida != contraseña)
     }
 }
     int opcion;
-    int suma = 0;
 
     do
     {
@@ -51,23 +50,43 @@ while (contraseñaIntroducida != contraseña)
                 Console.WriteLine(fechaEntrada);
                 break;
             case 2:
-                Console.WriteLine("Ingresa 2 números que quieras sumar");
-            for (int i = 1; i<=2; i++)
-            {
-                Console.WriteLine($"Pon el numero {i}");
-                Console.WriteLine("");
-                Console.WriteLine("");
+            Console.WriteLine("Introduce el primer número:");
+            string input1 = Console.ReadLine(); // Leer entrada del usuario
+            int numero1 = Convert.ToInt32(input1); // Convertir la entrada a entero
 
-                int input = int.Parse(Console.ReadLine());
-                suma += input;
+            // Solicitar al usuario el segundo número
+            Console.WriteLine("Introduce el segundo número:");
+            string input2 = Console.ReadLine(); // Leer entrada del usuario
+            int numero2 = Convert.ToInt32(input2); // Convertir la entrada a entero
 
-                Console.WriteLine($"La suma es {suma}");
-                Console.ReadLine();
-            }
-                break;
+            // Sumar los dos números
+            int suma = numero1 + numero2; // Realizar la suma
+
+            // Mostrar el resultado
+            Console.WriteLine("La suma de {0} y {1} es: {2}", numero1, numero2, suma);
+
+            break;
             case 3:
-                Console.WriteLine("Ha seleccionado la opción 3");
-                break;
+            // Solicitar al usuario un número
+            Console.WriteLine("Introduce un número hasta el cual deseas contar:");
+            string input = Console.ReadLine(); // Leer entrada del usuario
+
+            // Convertir la entrada a un entero
+            int numero;
+            if (int.TryParse(input, out numero))
+            {
+                // Contar desde 1 hasta el número introducido
+                for (int i = 1; i <= numero; i++)
+                {
+                    Console.WriteLine(i); // Mostrar el número actual
+                }
+            }
+            else
+            {
+                // Mensaje de error si la conversión falla
+                Console.WriteLine("Por favor, introduce un número válido.");
+            }
+            break;
             case 4:
                 Console.WriteLine("Ha seleccionado la opción 4");
                 break;
