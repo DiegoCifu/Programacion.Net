@@ -16,5 +16,6 @@ namespace EjemploClases
         int NumeroPuertas;
         int NumeroRuedas;
         int NumeroAsientos;
+        private Motor Motor;
     }
 }
