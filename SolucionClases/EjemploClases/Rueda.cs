@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace EjemploClases
 {
-    internal class Marca
+    internal class Rueda
     {
-        private string Pais;
-        private int Modelo;
-        private int AñoFabricacion;
+        private int Tamaño;
+        private string Tipo;
+        private string Fabricante;
+        private int PresionAire;
     }
 }
