@@ -8,14 +8,14 @@ namespace EjemploClases
 {
     public class Coche
     {
-        string Marca;
-        string Modelo;
-        string Color;
-        double Consumo;
-        int Cilindrada;
-        int NumeroPuertas;
-        int NumeroRuedas;
-        int NumeroAsientos;
-        private Motor Motor;
+       public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public string Color { get; set; }
+        public double Consumo { get; set; }
+        public int Cilindrada { get; set; }
+        public int NumeroPuertas { get; set; }
+        public int NumeroRuedas { get; set; }
+        public int NumeroAsientos { get; set; }
+        public Motor Motor { get; set; }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace EjemploClases
+﻿using EjemploClases;
 {
-    Coche Ford = new Coche();
+   Coche Ford = new Coche();
     Coche Mazda = new Coche();
     Coche Renault = new Coche();
     Coche Subaru = new Coche();
