@@ -8,9 +8,9 @@ namespace EjemploClases
 {
     public class Motor
     {
-        public int Cilindrada { get; set; }
+        public string Cilindrada { get; set; }
         public string Combustible { get; set; }
-        public double Consumo { get; set; }
-        public int Potencia { get; set; }
+        public string Consumo { get; set; }
+        public string Potencia { get; set; }
     }
 }
