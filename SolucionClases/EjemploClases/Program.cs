@@ -12,6 +12,14 @@
     Coche Citroen = new Coche();
 
     Ford.Cilindrada = "1200";
+    Ford.Consumo = "123";
+    Ford.Potencia = "124";
+    Ford.Combustible = "Diesel";
+
+    Mazda.Cilindrada = "1200";
+    Mazda.Consumo = "123";
+    Mazda.Potencia = "124";
+    Mazda.Combustible = "Diesel";
 
 
     Empleado empleado1 = new Empleado();

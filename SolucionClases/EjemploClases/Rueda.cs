@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace EjemploClases
 {
-    internal class Rueda
+    public class Rueda
     {
-        private int Tamaño;
-        private string Tipo;
-        private string Fabricante;
-        private int PresionAire;
+        public string Tamaño { get; set; }
+        public string Tipo { get; set; }
+        public string Fabricante { get; set; }
+        public string PresionAire { get; set; }
     }
 }

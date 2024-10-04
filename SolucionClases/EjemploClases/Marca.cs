@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace EjemploClases
 {
-    internal class Marca
+    public class Marca
     {
-        private string Pais;
-        private int Modelo;
-        private int AñoFabricacion;
+        public string Pais {get; set;}
+        public string Modelo { get; set; }
+        public string AñoFabricacion { get; set; }
     }
 }

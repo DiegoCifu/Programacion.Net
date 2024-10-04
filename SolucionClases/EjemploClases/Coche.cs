@@ -11,11 +11,11 @@ namespace EjemploClases
        public string Marca { get; set; }
         public string Modelo { get; set; }
         public string Color { get; set; }
-        public double Consumo { get; set; }
-        public int Cilindrada { get; set; }
-        public int NumeroPuertas { get; set; }
-        public int NumeroRuedas { get; set; }
-        public int NumeroAsientos { get; set; }
+        public string Consumo { get; set; }
+        public string Cilindrada { get; set; }
+        public string NumeroPuertas { get; set; }
+        public string NumeroRuedas { get; set; }
+        public string NumeroAsientos { get; set; }
         public Motor Motor { get; set; }
     }
 }
