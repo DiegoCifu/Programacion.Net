@@ -10,30 +10,35 @@ namespace EjemploCalculadora
     {
         //Metodo que suma dos numeros
         private double memoria;
+
+        // Campo para almacenar el último resultado
+        private double ultimoResultado;
+
+        // Método que suma dos números
         public double Sumar(double num1, double num2)
-        //Sumar sería el método
         {
-            MostrarMensaje($"Se van a sumar dos números {num1} y {num2}");
-            return (num1 + num2);
+            MostrarMensaje($"Se van a sumar dos números: {num1} y {num2}");
+            ultimoResultado = num1 + num2;
+            return ultimoResultado;
         }
-        //Restar
+
+        // Método que resta dos números
         public double Restar(double num1, double num2)
-
         {
-            MostrarMensaje($"Se van a restar dos números {num1} y {num2}");
-            return (num1 - num2);
+            MostrarMensaje($"Se van a restar dos números: {num1} y {num2}");
+            ultimoResultado = num1 - num2;
+            return ultimoResultado;
         }
-        // multiplicar
+
+        // Método que multiplica dos números
         public double Multiplicar(double num1, double num2)
-
         {
-            MostrarMensaje($"Se van a multiplicar dos números {num1} y {num2}");
-            return (num1 * num2);
+            MostrarMensaje($"Se van a multiplicar dos números: {num1} y {num2}");
+            ultimoResultado = num1 * num2;
+            return ultimoResultado;
         }
 
-        // Método para dividir
         public double Dividir(double num1, double num2)
-
         {
             if (num2 == 0)
             {
@@ -41,7 +46,8 @@ namespace EjemploCalculadora
                 return 0;
             }
             MostrarMensaje($"Se van a dividir dos números: {num1} y {num2}");
-            return num1 / num2;
+            ultimoResultado = num1 / num2;
+            return ultimoResultado;
         }
 
         // Método para guardar el resultado en memoria
@@ -57,25 +63,37 @@ namespace EjemploCalculadora
             MostrarMensaje($"Se ha recuperado el valor de memoria: {memoria}");
             return memoria;
         }
+
+        public double RecuperarUltimoResultado()
+        {
+            MostrarMensaje($"Se ha recuperado el último resultado: {ultimoResultado}");
+            return ultimoResultado;
+        }
+
         public void MostrarMensaje(string mensaje)
         {
             Console.WriteLine(mensaje);
         }
 
-        // Método para verificar si se debe usar la memoria o ingresar un número nuevo
+        // Método para verificar si se debe usar la memoria, el último resultado, o ingresar un número nuevo
         public double ObtenerNumero(string mensaje)
         {
             double numero;
             bool esNumeroValido = false;
 
             // Mostrar mensaje una sola vez
-            Console.WriteLine($"{mensaje} o presione 'M' si desea usar el número de la memoria: ");
+            Console.WriteLine($"{mensaje} o presione 'M' si desea usar el número de la memoria, o 'R' para usar el último resultado: ");
             string input = Console.ReadLine();
 
             // Si el usuario ingresa 'M', se usa la memoria
             if (input.ToUpper() == "M")
             {
                 return RecuperarDeMemoria();
+            }
+            // Si el usuario ingresa 'R', se usa el último resultado
+            else if (input.ToUpper() == "R")
+            {
+                return RecuperarUltimoResultado();
             }
             else
             {

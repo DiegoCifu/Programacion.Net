@@ -15,7 +15,7 @@ while (!salir)
     Console.WriteLine("3. Multiplicar");
     Console.WriteLine("4. Dividir");
     Console.WriteLine("M. Guardar en la memoria");
-    Console.WriteLine("R. Para recuperar valores anteriores");
+    Console.WriteLine("R. Para recuperar el ultimo resultado");
     Console.WriteLine("5. Salir");
     Console.WriteLine("Seleccine una opción");
     string opcion = Console.ReadLine();
@@ -62,7 +62,7 @@ while (!salir)
             calculadora.GuardarEnMemoria(resultado);
             break;
         case "R":
-            resultado = calculadora.RecuperarResultado();
+            resultado = calculadora.RecuperarUltimoResultado();
             calculadora.MostrarMensaje($"Valor recuperado: {resultado}");
             break;
         case "5":
