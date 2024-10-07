@@ -65,7 +65,11 @@ namespace EjemploCalculadora
         // Método para verificar si se debe usar la memoria o ingresar un número nuevo
         public double ObtenerNumero(string mensaje)
         {
-            Console.WriteLine($"{mensaje} (Escriba 'M' para usar el valor en memoria): ");
+            double numero;
+            bool esNumeroValido = false;
+
+            // Mostrar mensaje una sola vez
+            Console.WriteLine($"{mensaje} o presione 'M' si desea usar el número de la memoria: ");
             string input = Console.ReadLine();
 
             // Si el usuario ingresa 'M', se usa la memoria
@@ -76,9 +80,7 @@ namespace EjemploCalculadora
             else
             {
                 // Intentar convertir el valor ingresado a número
-                double numero;
-                bool esNumeroValido = Double.TryParse(input, out numero);
-
+                esNumeroValido = Double.TryParse(input, out numero);
                 if (esNumeroValido)
                 {
                     return numero;
@@ -86,7 +88,7 @@ namespace EjemploCalculadora
                 else
                 {
                     MostrarMensaje("Error: Debe ingresar un número válido.");
-                    return ObtenerNumero(mensaje);  // Vuelve a solicitar el número si no es válido
+                    return ObtenerNumero(mensaje); // Volver a llamar al método si no es válido
                 }
             }
         }

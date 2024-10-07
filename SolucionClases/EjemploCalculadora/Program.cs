@@ -62,8 +62,8 @@ while (!salir)
             calculadora.GuardarEnMemoria(resultado);
             break;
         case "R":
-            resultado = calculadora.RecuperarDeMemoria();
-            calculadora.MostrarMensaje($"Valor recuperado de memoria: {resultado}");
+            resultado = calculadora.RecuperarResultado();
+            calculadora.MostrarMensaje($"Valor recuperado: {resultado}");
             break;
         case "5":
             salir = true;
