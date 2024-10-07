@@ -22,7 +22,7 @@ while (!salir)
 
     double num1, num2, resultado;
 
-    switch (opcion.ToUpper())
+    switch (opcion.ToUpper()) //ToUpper permite usar mayusculas y minusculas
     {
         case "1":
             Console.WriteLine("Ingrese el primer número: ");
