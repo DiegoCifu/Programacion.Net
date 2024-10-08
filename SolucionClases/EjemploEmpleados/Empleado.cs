@@ -34,6 +34,21 @@ namespace EjemploClases
             // Mediante interpolación de cadenas
             Console.WriteLine($"Nombre empleado: {Nombre} Departamento Empleado: {Departamento} Telefono Empleado: {Telefono}");
         }
+        public Empleado()
+        {
+            Nombre = "Sin nombre";
+            Departamento = "Sin departamento";
+            Telefono = "Sin Telefono";
+        }
 
+        // Constructor con parámetros
+        public Empleado(string nombre, string departamento, string telefono, string iban, string numeroEmpleado)
+        {
+            Nombre = nombre;
+            Departamento = departamento;
+            Telefono = telefono;
+            IBAN = iban;
+            NumeroEmpleado = numeroEmpleado;
+        }
     }
 }
