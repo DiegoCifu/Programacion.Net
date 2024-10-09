@@ -10,7 +10,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\ClasesAnimales\ClasesAnimales.csproj" />
 		<ProjectReference Include="..\ClasesEmpleados\ClasesEmpleado.csproj" />
-		<ProjectReference Include="..\ClasesLibros\ClasesBook.csproj" />
+		<ProjectReference Include=""C:\Users\diego\source\repos\Programacion.Net\EjemploHerenciaSolucion\ClasesBook\ClasesBook.csproj"" />
 	</ItemGroup>
 
 </Project>
