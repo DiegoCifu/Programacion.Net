@@ -24,8 +24,8 @@ var employees = new List<Empleado>
 {
     new Administrative("John", 5),
     new Factory("Jane", 3),
-    new MiddleMgMt("Jim", 2),
-    new SeniorMgMt("Jill", 7)
+    new MiddleMgmt("Jim", 2),
+    new SeniorMgmt("Jill", 7)
 };
 // Mostrar la información de los empleados mediante un bucle foreach 
 // y el metodo ToString que se ha sobrescrito en cada clase
