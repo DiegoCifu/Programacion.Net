@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasesBook
 {
-    public class NoFiction : Book
+    public abstract class NoFiction : Book
     {
         public NoFiction(string title, string author, int pages)
             : base(title, author, pages)

@@ -20,7 +20,7 @@ foreach (Animal animal in animals)
 }
 
 // Crear una lista de Empleados , basados en las clases Administrative, Factory, MiddleMgmt y SeniorMgMt
-var employees = new List<Empleado>
+var employees = new List<Employee>
 {
     new Administrative("John", 5),
     new Factory("Jane", 3),
@@ -29,7 +29,7 @@ var employees = new List<Empleado>
 };
 // Mostrar la información de los empleados mediante un bucle foreach 
 // y el metodo ToString que se ha sobrescrito en cada clase
-foreach (Empleado employee in employees)
+foreach (Employee employee in employees)
 {
     Console.WriteLine(employee.ToString());
 }
