@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\ClasesAnimales\ClasesAnimales.csproj" />
+		<ProjectReference Include="..\ClasesEmpleado\ClasesEmpleado.csproj" />
+		<ProjectReference Include="..\ClasesBook\ClasesBook.csproj" />
+	</ItemGroup>
+	
 </Project>
