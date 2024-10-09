@@ -8,5 +8,18 @@ namespace ClasesEmpleado
 {
     public class Employee
     {
+
+        // Propiedad Nombre
+        public string Nombre { get; set; }
+
+        // Propiedad Años en la empresa
+        public int Años { get; set; }
+
+        // Constructor que recibe el nombre y los años
+        public Employee(string nombre, int años)
+        {
+            Nombre = nombre;
+            Años = años;
+        }
     }
 }
