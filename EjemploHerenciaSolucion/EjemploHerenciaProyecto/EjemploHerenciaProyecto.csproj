@@ -6,5 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
+<ItemGroup>
+    <ProjectReference Include="..\ClasesAnimales\ClasesAnimales.csproj" />
+    <ProjectReference Include="..\ClasesEmpleados\ClasesEmpleado.csproj" />
+    <ProjectReference Include="..\ClasesLibros\ClasesBook.csproj" />
+  </ItemGroup
 </Project>
