@@ -7,5 +7,8 @@ namespace ClasesAnimales
 {
     public class Dog : Animal
     {
+        public Dog(string nombre, int edad) : base(nombre, edad)
+        {
+        }
     }
 }
