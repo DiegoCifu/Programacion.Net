@@ -9,6 +9,7 @@ namespace ClasesAnimales
     {
         public Cat(string nombre, int edad) : base(nombre, edad)
         {
+
         }
     }
 }

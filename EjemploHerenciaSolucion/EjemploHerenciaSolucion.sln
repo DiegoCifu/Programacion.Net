@@ -5,11 +5,16 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploHerenciaProyecto", "EjemploHerenciaProyecto\EjemploHerenciaProyecto.csproj", "{E88027D5-3B41-4463-82ED-697F8CE85B9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesAnimales", "ClasesAnimales\ClasesAnimales.csproj", "{826E473E-F392-4D30-8066-F9CCD69E2E6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClasesAnimales", "ClasesAnimales\ClasesAnimales.csproj", "{826E473E-F392-4D30-8066-F9CCD69E2E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesEmpleado", "ClasesEmpleado\ClasesEmpleado.csproj", "{58C4957B-F14C-48B0-B22F-862409ADFF7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClasesEmpleado", "ClasesEmpleado\ClasesEmpleado.csproj", "{58C4957B-F14C-48B0-B22F-862409ADFF7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesBook", "ClasesBook\ClasesBook.csproj", "{E6BDA886-2B4A-4F9F-B30D-BF5FB040CDF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClasesBook", "ClasesBook\ClasesBook.csproj", "{E6BDA886-2B4A-4F9F-B30D-BF5FB040CDF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{CFC54458-BA76-42EF-875B-FA306775D380}"
+	ProjectSection(SolutionItems) = preProject
+		Program.cs = Program.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
