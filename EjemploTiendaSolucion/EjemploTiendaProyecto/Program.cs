@@ -5,18 +5,18 @@ var builder = WebApplication.CreateBuilder(args);
 #region Servicios
 //      =========
 
-    // Add services to the container.
-    builder.Services.AddControllersWithViews();
+// Add services to the container.
+builder.Services.AddControllersWithViews();
 
-    // Configurar servicios dependiendo del entorno
-    if (builder.Environment.IsDevelopment())
-    {
-        builder.Services.AddScoped<IEmailService, FakeEmailService>();
-    }
-    else
-    {
-        builder.Services.AddScoped<IEmailService, RealEmailService>();
-    }
+// Configurar servicios dependiendo del entorno
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddScoped<IEmailService, FakeEmailService>();
+}
+else
+{
+    builder.Services.AddScoped<IEmailService, RealEmailService>();
+}
 
 #endregion
 
