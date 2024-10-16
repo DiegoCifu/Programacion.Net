@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 3D con Three.js</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+    // Configuración básica de la escena
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Crear un plano para el suelo
+    var planeGeometry = new THREE.PlaneGeometry(500, 500);
+    var planeMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 }); // Material que responde a la luz
+    var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    plane.rotation.x = - Math.PI / 2; // Rotamos el plano para que esté horizontal
+    scene.add(plane);
+
+    // Crear un cubo (puede representar una casa, por ejemplo)
+    var geometry = new THREE.BoxGeometry(1, 1, 1);
+    var material = new THREE.MeshPhongMaterial({ color: 0x0000ff }); // Material que responde a la luz
+    var cube = new THREE.Mesh(geometry, material);
+    cube.position.y = 0.5; // Levantamos el cubo para que no esté dentro del suelo
+    scene.add(cube);
+
+    // Añadir luz a la escena
+    var light = new THREE.DirectionalLight(0xffffff, 1); // Luz direccional
+    light.position.set(5, 5, 5); // Posicionamos la luz
+    scene.add(light);
+
+    // Posicionar la cámara
+    camera.position.z = 4;
+    camera.position.y = 2;
+
+    // Animación para rotar el cubo
+    function animate() {
+        requestAnimationFrame(animate);
+
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    // Ajustar el tamaño al redimensionar la ventana
+    window.addEventListener('resize', function () {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+    });
+
+</script>
+
+</body>
+</html>
