@@ -1,19 +1,16 @@
-using EjemploTiendaProyecto.Models;
-using EjemploTiendaProyecto.Services;
 using Microsoft.AspNetCore.Mvc;
+using ProyectoFinalCursoWeb.Models;
 using System.Diagnostics;
 
-namespace EjemploTiendaProyecto.Controllers
+namespace ProyectoFinalCursoWeb.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IEmailService _emailService;
 
-        public HomeController(ILogger<HomeController> logger, IEmailService emailService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _emailService = emailService;
         }
 
         public IActionResult Index()
@@ -23,18 +20,6 @@ namespace EjemploTiendaProyecto.Controllers
 
         public IActionResult Privacy()
         {
-            ViewBag.Message = "¡Gracias por tu interés en nuestra tienda!";
-            ViewBag.Fecha = DateTime.Now;
-            ViewBag.Email = "pedidos@mail.com";
-
-            return View();
-        }
-
-        public IActionResult QuienesSomos()
-        {
-            ViewBag.Message = "Quienes somos. Conoce nuestra tienda";
-          
-
             return View();
         }
 
