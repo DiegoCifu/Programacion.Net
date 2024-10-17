@@ -1,8 +1,3 @@
-using EjemploTiendaProyecto.Models;
-using EjemploTiendaProyecto.Services;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-
 namespace EjemploTiendaProyecto.Controllers;
 
 public class HomeController : Controller

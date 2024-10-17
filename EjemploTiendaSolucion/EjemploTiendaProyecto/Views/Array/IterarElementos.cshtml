@@ -1,0 +1,29 @@
+﻿@model int[]
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Ver elementos de un array</h2>
+
+<h2>Visualizar elementos de un array con foreach</h2>
+<ul>
+    @* Visualizar elementos de un array *@
+    @foreach (var item in Model)
+    {
+        <li>Elemento del array:  @item</li>
+    }
+</ul>
+
+<h2>Visualizar elementos de un array con índice mediante for</h2>
+<ul>
+    @* Visualizar elementos de un array con índice *@
+    @for (int i = 0; i < Model.Length; i++)
+    {
+        <li>Elemento del array:  @Model[i]</li>
+    }
+</ul>
+
+
+<p><a asp-action="FAQ">Preguntas y respuestas</a></p>

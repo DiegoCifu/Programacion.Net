@@ -18,6 +18,8 @@ else
     builder.Services.AddScoped<IEmailService, RealEmailService>();
 }
 
+builder.Services.AddScoped<IMonedaRepositorio, MonedaRepositorioEnMemoria>();
+
 #endregion
 
 var app = builder.Build();
